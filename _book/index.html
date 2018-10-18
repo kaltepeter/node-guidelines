@@ -1,0 +1,1299 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Initial page · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Initial page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Initial page</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="node-guidelines">Node guidelines</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_purpose_of_this_document">1. Purpose of this document</a></li>
+<li><a href="#_getting_started">2. Getting started</a>
+<ul class="sectlevel2">
+<li><a href="#_node_version">2.1. Node version</a>
+<ul class="sectlevel3">
+<li><a href="#_how_the_versioning_works">2.1.1. How the versioning works</a></li>
+</ul>
+</li>
+<li><a href="#_javascript_features_support">2.2. Javascript features support</a>
+<ul class="sectlevel4">
+<li><a href="#_typings">Typings</a></li>
+<li><a href="#_formatting">Formatting</a></li>
+<li><a href="#_linting_and_tsconfig_json">Linting and tsconfig.json</a></li>
+<li><a href="#_other_options">Other options</a></li>
+</ul>
+</li>
+<li><a href="#_frameworks">2.3. Frameworks</a></li>
+<li><a href="#_setting_up_logging">2.4. Setting up Logging</a>
+<ul class="sectlevel3">
+<li><a href="#_winston">2.4.1. Winston</a></li>
+<li><a href="#_splunk">2.4.2. Splunk</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_tools">3. Tools</a>
+<ul class="sectlevel2">
+<li><a href="#_graphql">3.1. GraphQL</a></li>
+</ul>
+</li>
+<li><a href="#_build">4. Build</a>
+<ul class="sectlevel2">
+<li><a href="#_nx">4.1. Nx</a></li>
+</ul>
+</li>
+<li><a href="#_development">5. Development</a>
+<ul class="sectlevel2">
+<li><a href="#_project_structure">5.1. Project structure</a>
+<ul class="sectlevel3">
+<li><a href="#_lower_case_filenames">5.1.1. Lower-case filenames</a></li>
+<li><a href="#_root_code_index_ts_code">5.1.2. Root <code>index.ts</code></a></li>
+<li><a href="#_resources">5.1.3. Resources</a></li>
+<li><a href="#_libs">5.1.4. Libs</a></li>
+</ul>
+</li>
+<li><a href="#_error_handling">5.2. Error handling</a>
+<ul class="sectlevel3">
+<li><a href="#_promises">5.2.1. Promises</a></li>
+<li><a href="#_global_error_handler">5.2.2. Global error handler</a></li>
+<li><a href="#_uncaughtexceptions">5.2.3. UncaughtExceptions</a></li>
+<li><a href="#_testing">5.2.4. Testing</a>
+<ul class="sectlevel4">
+<li><a href="#_frameworks_2">frameworks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_using_logging">5.3. Using Logging</a>
+<ul class="sectlevel3">
+<li><a href="#_severity_levels">5.3.1. Severity levels</a></li>
+<li><a href="#_transports">5.3.2. Transports</a></li>
+</ul>
+</li>
+<li><a href="#_authentication">5.4. Authentication</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_and_set_up">6. Configuration and set up</a>
+<ul class="sectlevel2">
+<li><a href="#_process_managers">6.1. Process managers</a></li>
+<li><a href="#_nginx">6.2. nginx</a></li>
+<li><a href="#_environment_configuration">6.3. Environment configuration</a></li>
+<li><a href="#_urls">6.4. URLs</a></li>
+</ul>
+</li>
+<li><a href="#_checklist">7. Checklist</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<link rel="stylesheet" href="../assets/fa.css">
+<link rel="stylesheet" href="../assets/highlight/styles/github.css">
+<script src="../assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_purpose_of_this_document"><a class="anchor" href="#_purpose_of_this_document"></a>1. Purpose of this document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document is meant to aid in three ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Getting started with a new node project</strong>: Infrastructure guides</p>
+</li>
+<li>
+<p><strong>Reference</strong>: A knowledge base of conventions and best practices that should be used across all node projects</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>2. Getting started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_node_version"><a class="anchor" href="#_node_version"></a>2.1. Node version</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use version 10 of node</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Node release chart</div>
+<p><span class="image"><img src="images/node-lts-schedule.png" alt="node lts schedule.png"></span>
+As of this document, the current LTS version of node is v10. A Current version receives minor and patch releases regularly and an Active version receives them monthly. As of October 2018, v10 will become an Active release so it is beneficial for us to already be on v10 so that we won&#x2019;t have to think about updating early next year when version 8 goes into Maintenance mode.</p>
+</div>
+<div class="sect3">
+<h4 id="_how_the_versioning_works"><a class="anchor" href="#_how_the_versioning_works"></a>2.1.1. How the versioning works</h4>
+<div class="paragraph">
+<p>New major releases occur every six months. Odd-numbered releases occur in October and are actively supported for 6 months. Even-numbered releases occur in April and are actively supported for 18 months (LTS).</p>
+</div>
+<div class="paragraph">
+<p>It is beneficial to stay on LTS releases to ensure stability and to have a more predictable upgrade cycle.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Odd numbered versions are non-LTS releases. They should only be used for evaluation and not in production.</p>
+</div>
+<div class="paragraph">
+<p><strong>In production we should only use even-numbered LTS versions.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_javascript_features_support"><a class="anchor" href="#_javascript_features_support"></a>2.2. Javascript features support</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use typescript</p>
+</li>
+<li>
+<p>Remember to import the typings for third-party dependencies and to save them in devDependencies</p>
+</li>
+<li>
+<p>Use the same <code>tslint.json</code> and <code>tsconfig.json</code> whenever possible</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Typescript is used in the front-end with Angular and it makes sense to keep things consistent when writing code with node as well.</p>
+</div>
+<div class="paragraph">
+<p>A further advantage, though one that is not as important with newer versions of node, is that it shields the developer from trying to account for which features are supported by the underlying node version. Typescript can transpile code to previous versions of the ECMAScript spec so that it can be compatible with older versions of node. Polyfills can be used when needed.</p>
+</div>
+<div class="sect4">
+<h5 id="_typings"><a class="anchor" href="#_typings"></a>Typings</h5>
+<div class="paragraph">
+<p>When working with typescript in node, we must remember to install and save the typings for node libraries. A lot of the node libraries are written and/or distributed in pure javascript without typings, and we need to ensure that the typings are present for support in IDEs and editors.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_formatting"><a class="anchor" href="#_formatting"></a>Formatting</h5>
+<div class="paragraph">
+<p>It is recommended to use Prettier to assist with maintaining consistent formatting of the code and to avoid whitespace changes in diffs.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_linting_and_tsconfig_json"><a class="anchor" href="#_linting_and_tsconfig_json"></a>Linting and tsconfig.json</h5>
+<div class="paragraph">
+<p>It is recommended that the same <code>tslint.json</code> and <code>tsconfig.json</code> be used as in the front-end so that developers won&#x2019;t need to re-orient themselves when switching from one to the other. This is easier to accomplish in a mono-repo.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_other_options"><a class="anchor" href="#_other_options"></a>Other options</h5>
+<div class="paragraph">
+<p>Other options are to use Babel to transpile the code, or to simply write javascript though this will require the developer to know which version of node is being targeted and also to rewrite the code when the node version is changed.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_frameworks"><a class="anchor" href="#_frameworks"></a>2.3. Frameworks</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use express</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Express</th>
+<th class="tableblock halign-left valign-top">Koa</th>
+<th class="tableblock halign-left valign-top">Nest</th>
+<th class="tableblock halign-left valign-top">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getting started</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Getting started is relatively easy - there are a lot of tutorials and it is a mature framework.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is similar enough to Express that users can switch over. The use of async functions might need some training.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is a fair bit of abstraction - it is very similar to Angular in that sense. It also uses typescript by default and is modeled after Angular.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Express</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax sugar and helpers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is no provided syntax sugar. A lot of functions still use callbacks, though Promises are supported in most cases.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Async/await is the predominant pattern in the code and it makes things a bit easier to read; but error handling still needs a lot of attention.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is a lot of sugar provided e.g. Decorators for controllers; this allows the developer to use the prescribed way of doing things rather than to code things by hand.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Out of the box functionality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A basic server with routing is possible. You need to have middleware to do anything more than this (body parser to help with JSON payloads, etc.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Koa is very minimal by design - you need to install middleware to make it do anything else</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nest is built on top of Express and includes a lot of out of the box functionality. Similar to Angular, it comes with a lot built in.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation is thorough and maintained - versioning is available.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation is present but not versioned. The descriptions are also generated and not in-depth and descriptive. It is more of a reference for methods and properties.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation is good and versioned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Express and Nest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance with Express is generally good - it largely depends on the number of middleware functions in use and routing configuration (developer code ignored)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performace is the main focus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance is good</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Koa</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maturity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Very mature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relatively new</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Express</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ease of finding developers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Easy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hard to find people with direct experience but there is a fair amount of transferable skill from Express</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a new framework so there won&#x2019;t be developers with direct experience</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Express</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_logging"><a class="anchor" href="#_setting_up_logging"></a>2.4. Setting up Logging</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use Winston for logging</p>
+</li>
+<li>
+<p>Use Splunk for log analysis</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_winston"><a class="anchor" href="#_winston"></a>2.4.1. Winston</h4>
+<div class="paragraph">
+<p><a href="https://github.com/winstonjs/winston" target="_blank">Winston</a> is a logging utility that supports many &quot;transports&quot; e.g. stdout, file, even network calls. Logs also have different severity levels that are customizable. Winston plays nicely with Splunk.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_splunk"><a class="anchor" href="#_splunk"></a>2.4.2. Splunk</h4>
+<div class="paragraph">
+<p>Splunk is used on other back-ends at Merrill and should be used with node applications as well. It allows for analysis on log messages and retrieval of messages.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>3. Tools</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_graphql"><a class="anchor" href="#_graphql"></a>3.1. GraphQL</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<p>*</p>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build"><a class="anchor" href="#_build"></a>4. Build</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use webpack to build</p>
+</li>
+<li>
+<p>Run the server with javascript (not typescript)</p>
+</li>
+<li>
+<p>Stay within confines of pipeline unless absolutely necessary</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_nx"><a class="anchor" href="#_nx"></a>4.1. Nx</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development"><a class="anchor" href="#_development"></a>5. Development</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_structure"><a class="anchor" href="#_project_structure"></a>5.1. Project structure</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure that all filenames are <strong>lower-case</strong></p>
+</li>
+<li>
+<p>Ensure that the root index file contains the minimum amount of initialization code and nothing else</p>
+</li>
+<li>
+<p>Ensure that you break the application up by <strong>resources</strong></p>
+</li>
+<li>
+<p>Ensure that you are using the recommended libraries for each use case</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There are some conventions that will ensure that we have a uniform experience across different Express-based apps:</p>
+</div>
+<div class="sect3">
+<h4 id="_lower_case_filenames"><a class="anchor" href="#_lower_case_filenames"></a>5.1.1. Lower-case filenames</h4>
+<div class="paragraph">
+<p>Certain file systems are case-insensitive and cause many issues with development, since what may work on that computer won&#x2019;t work on other systems. We always want to be deterministic in our builds and so we should ensure that we keep consistent file naming structure.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use only lower-case letters</p>
+</li>
+<li>
+<p>Separate words using hyphens</p>
+</li>
+<li>
+<p>Use dots to separate the file type and extension e.g. <code>user.service.ts</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_root_code_index_ts_code"><a class="anchor" href="#_root_code_index_ts_code"></a>5.1.2. Root <code>index.ts</code></h4>
+<div class="paragraph">
+<p>The only work that is done in the root file is to initialize the app and start Express. Initialization will have at least the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create the express app</p>
+</li>
+<li>
+<p>Ensure that request handling is configured (JSON support with <code>body-parser</code>, CORS with <code>cors</code>)</p>
+</li>
+<li>
+<p>Ensure that <code>helmet</code> is used</p>
+</li>
+<li>
+<p>Register all the routers for each resource</p>
+</li>
+<li>
+<p>Retrieve the environment config</p>
+</li>
+<li>
+<p>Initialize logging</p>
+</li>
+<li>
+<p>Initialize any external connections</p>
+</li>
+<li>
+<p>Start listening to the port</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure that the root index file contains no more than the bare minimum of initialization logic</p>
+</li>
+<li>
+<p>Ensure that you export the initialization promise for the Express app so that you can test the server</p>
+</li>
+<li>
+<p>Ensure that initialization is deterministic and that the server does not start unless all the initializations complete successfully</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_resources"><a class="anchor" href="#_resources"></a>5.1.3. Resources</h4>
+<div class="paragraph">
+<p>An Express application is easier to reason about and to develop for when it is broken up by resource. All the files related to the concept of a <code>User</code> should exist together in a library. This includes the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Router for that resource</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Route handlers for the resource</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A service for that resource</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>For example, a sample User resource might have the following structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  libs
+  |-- myApp
+      |--user
+        |--src
+            |--lib
+            |  |--user.routes.ts
+            |  |--user.service.spec.ts
+            |  |--user.service.ts
+            |  |--user.utils.spec.ts <b class="conum">(1)</b>
+            |  |--user.utils.ts <b class="conum">(1)</b>
+            |
+            |--index.ts <b class="conum">(2)</b></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Optional</p>
+</li>
+<li>
+<p>The barrel exports the router and the service; and everything from utils if it exists</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_libs"><a class="anchor" href="#_libs"></a>5.1.4. Libs</h4>
+<div class="paragraph">
+<p>Libraries help in modularizing and sharing code. Traditionally enterprises create a private npm repository that would be used to publish packages internally. In a mono-repo setting this is still possible but the intent is to directly use these libraries in our code without publishing them, and then having to import them back into the application.</p>
+</div>
+<div class="paragraph">
+<p>A back-end application can generally be broken up into smaller single-responsibility libraries that can be composed as needed. Each library is a self-contained module but can also expose services that can handle functionality specific to its particular domain.</p>
+</div>
+<div class="listingblock">
+<div class="title">An example of breaking an app into modules</div>
+<div class="content">
+<pre>Let&apos;s consider a todo list application. The below might be a potential structure for this application.
+
+--apps
+  |-- todo-app
+
+--libs
+  |-- user
+  |   |-- index.ts
+  |   |-- user.routes.ts
+  |   |-- user.service.ts
+  |   |-- user.types.ts
+  |-- task
+  |   |-- index.ts
+  |   |-- task.routes.ts
+  |   |-- task.service.ts
+  |   |-- task.types.ts
+  |-- util
+      |-- config.service.ts
+      |-- log.service.ts</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note the library breakdown by domain: if Task needs User, there is a direct dependency. There may be instances where there might be a circular dependency</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_error_handling"><a class="anchor" href="#_error_handling"></a>5.2. Error handling</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use an Error library to help with propagating custom Errors</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_promises"><a class="anchor" href="#_promises"></a>5.2.1. Promises</h4>
+<div class="paragraph">
+<p>Ensure that promise errors are caught. Any unhandled failed promises are treated as uncaught exceptions, and in future node versions will crash the process. See DEP0018 in the node documentation.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, note that we don&#x2019;t have an error handler for the promise.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+  <span class="hljs-keyword">return</span> asyncGetResource() (<span class="hljs-number">1</span>)
+    .then(resource =&gt; res.json(resource));
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>If <code>asyncGetResource</code> were to throw an error, then the request would time out. Why? There is no error handler for the promise, so this middleware never sends a response and will eventually timeout. On the server there would be a warning generated about unhandled exceptions along with a deprecation warning.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">A correct implementation</div>
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+  <span class="hljs-keyword">return</span> asyncGetResource()
+    .then((resource: Response) =&gt; res.json(resource))
+    .catch(err =&gt; {
+      <span class="hljs-comment">// log the error</span>
+      res.status(<span class="hljs-number">500</span>).end();
+    });
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_global_error_handler"><a class="anchor" href="#_global_error_handler"></a>5.2.2. Global error handler</h4>
+<div class="paragraph">
+<p>Ensure that there is a global error handler for express. This is identified by a middleware that takes 4 arguments - it must be exactly 4. This gets called whenever <code>next()</code> is called with an error (e.g. in authentication middleware). Use custom Errors here to display the appropriate error to the user.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">app.use((err, req, resp, next) =&gt; {
+  <span class="hljs-comment">// log the error, return status code of 500</span>
+});</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This must be the last middleware registered with Express for it to work as intended.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uncaughtexceptions"><a class="anchor" href="#_uncaughtexceptions"></a>5.2.3. UncaughtExceptions</h4>
+<div class="paragraph">
+<p>Ensure that uncaught exceptions are handled but that the process still exits. This is the place to perform cleanup and to log the exception.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">process.on(<span class="hljs-string">&apos;uncaughtException&apos;</span>, (err: <span class="hljs-built_in">Error</span>) =&gt; {
+  logger.error(err);
+  <span class="hljs-comment">// Perform some safe clean-up here if needed.</span>
+  <span class="hljs-comment">// Avoid anything that might throw other exceptions.</span>
+  process.exit(<span class="hljs-number">1</span>); (<span class="hljs-number">1</span>)
+})</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Ensure that the process exits</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_testing"><a class="anchor" href="#_testing"></a>5.2.4. Testing</h4>
+<div class="sect4">
+<h5 id="_frameworks_2"><a class="anchor" href="#_frameworks_2"></a>frameworks</h5>
+<div class="paragraph">
+<p>There are two main testing frameworks in node: <code>Jest</code> and <code>Mocha</code>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Mocha</dt>
+<dd>
+<p>Mocha has been around for a long time and has a number of helpers (<code>chai</code> for more readable syntax, <code>chai-as-promised</code> for handling asynchronous code. etc.). Mocha needs a test runner to run.</p>
+</dd>
+<dt class="hdlist1">Jest</dt>
+<dd>
+<p>Jest is fairly new but has a number of benefits. It can handle most things out of the box: assertions, spies, mocks, it includes a runner, and many other utilities.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_logging"><a class="anchor" href="#_using_logging"></a>5.3. Using Logging</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>use Winston for logging</p>
+</li>
+<li>
+<p>initialize winston</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Winston is a fairly robust and mature solution for logging. It should be used in all cases, even where the logs are being handled by the process manager.</p>
+</div>
+<div class="sect3">
+<h4 id="_severity_levels"><a class="anchor" href="#_severity_levels"></a>5.3.1. Severity levels</h4>
+<div class="paragraph">
+<p>Out of the box, Winston comes with the same severity levels as <code>console</code>: debug, log, error, etc. It can be configured with custom severity levels as well, in cases where we want more control over handling the log call e.g. a severity of <code>catastrophic</code> that triggers an email to be dispatched.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_transports"><a class="anchor" href="#_transports"></a>5.3.2. Transports</h4>
+<div class="paragraph">
+<p>Winston has a concept of transports: these are outlets for logs and can be configured to only output a message for a minimum severity level. Out of the box it is configured to a single transport for <code>stdout</code> but it is possible to also log ot files and remote endpoints.</p>
+</div>
+<div class="paragraph">
+<p>The recommendation is to use custom severity levels but only use the <code>stdout</code> or <code>console</code> transport. We can then handle these in PM2 for better visibility.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>5.4. Authentication</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>use Passport for authentication</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_and_set_up"><a class="anchor" href="#_configuration_and_set_up"></a>6. Configuration and set up</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use PM2 as a process manager</p>
+</li>
+<li>
+<p>Use nginx as a reverse proxy</p>
+</li>
+<li>
+<p>Store all configuration in environment variables</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_process_managers"><a class="anchor" href="#_process_managers"></a>6.1. Process managers</h3>
+<div class="paragraph">
+<p>Node processes are meant to fail-fast. Any unexpected errors would leave the server application in an unpredictable state and so it is better to exit the process and restart the server. However, the logic to restart the server needs to live somewhere outside of your node application. This is where process managers come in.</p>
+</div>
+<div class="paragraph">
+<p>A Process Manager is responsible for maintaining multiple instances of the node processes for a single application. It is possible to roll your own, but as with most things it is best to use a mature framework if it exists because we need it to be reliable and proven.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">PM2</dt>
+<dd>
+<p><a href="http://pm2.keymetrics.io/" target="_blank">PM2</a> is a process manager with many advanced features: monitoring, graceful shutdown, log file management, exception management, etc. It is available as an npm package.</p>
+</dd>
+<dt class="hdlist1">nodemon</dt>
+<dd>
+<p><a href="http://nodemon.io/" target="_blank">nodemon</a> is mostly used for <strong>local development</strong>. It features file watching and can be configured with a config file. It can also run as a daemon.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nginx"><a class="anchor" href="#_nginx"></a>6.2. nginx</h3>
+<div class="paragraph">
+<p><a href="https://www.nginx.com/" target="_blank">Nginx</a> should be used as a load balancer and for SSL termination before handing off to PM2.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_environment_configuration"><a class="anchor" href="#_environment_configuration"></a>6.3. Environment configuration</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Use cfenv to retrieve the environment configuration in the application</p>
+</li>
+<li>
+<p>Make the application terminate if all the expected keys are not found</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cloud Foundry has a particular way of injecting environment variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.cloudfoundry.org/buildpacks/node/node-service-bindings.html" target="_blank">Cloud Foundry docs</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudfoundry-community/node-cfenv" target="_blank">cfenv</a>: Package to help with parsing the environment variables into an object that can be used immediately</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Rather than rolling our own, it is recommended to use this method of reading environment variables.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure that there is an initialization step when the app starts to read in the environment variables into the config service. Do not start the app unless all the expected variables are present.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_urls"><a class="anchor" href="#_urls"></a>6.4. URLs</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_checklist"><a class="anchor" href="#_checklist"></a>7. Checklist</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use this checklist to help you when developing an application</p>
+</div>
+<div class="ulist checklist">
+<div class="title">Application setup</div>
+<ul class="checklist">
+<li>
+<p>&#x274F; Using node v10</p>
+</li>
+<li>
+<p>&#x274F; Using typescript</p>
+</li>
+<li>
+<p>&#x274F; tsconfig and tslint are set up in standard way</p>
+</li>
+<li>
+<p>&#x274F; Using express or raw http</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Build</div>
+<ul class="checklist">
+<li>
+<p>&#x274F; Using pipeline provided</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Development</div>
+<ul class="checklist">
+<li>
+<p>&#x274F; lower-case filenames</p>
+</li>
+<li>
+<p>&#x274F; root index file only performs initialization</p>
+</li>
+<li>
+<p>&#x274F; libs are used to encapsulate domains</p>
+</li>
+<li>
+<p>&#x274F; promises are always returned from functions (rather than executing in the background)</p>
+</li>
+<li>
+<p>&#x274F; promises are always handled at the top level (in the controllers)</p>
+</li>
+<li>
+<p>&#x274F; global error handler exists</p>
+</li>
+<li>
+<p>&#x274F; uncaught exceptions are handled and process exits</p>
+</li>
+<li>
+<p>&#x274F; use of jest (older projects may use mocha)</p>
+</li>
+<li>
+<p>&#x274F; winston is set up</p>
+</li>
+<li>
+<p>&#x274F; winston is initialized at start up</p>
+</li>
+<li>
+<p>&#x274F; environment variables are captured at application startup</p>
+</li>
+<li>
+<p>&#x274F; application terminates if all the required environment variables are not present</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Running</div>
+<ul class="checklist">
+<li>
+<p>&#x274F; PM2 is set up</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Initial page","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.adoc","mtime":"2018-07-30T18:23:09.000Z","type":"asciidoc"},"gitbook":{"version":"3.2.3","time":"2018-07-30T19:50:29.999Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
